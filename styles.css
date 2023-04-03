@@ -1,3 +1,4 @@
+/* Document styles */
 *,
 *::before,
 *::after {
@@ -13,7 +14,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   background-color: #f9fbfd;
 }
 
@@ -23,6 +24,7 @@ body {
   padding-right: 20px;
 }
 
+/* Header styles */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +32,19 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+.navbar {
+  background-color: #2C4251;
+}
+
+.navbar-brand.h1 {
+  color: #66cdaa;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+/* Card styles (main content) */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -37,7 +52,7 @@ header {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   max-width: 800px;
   padding: 30px 40px;
 }
@@ -54,8 +69,13 @@ header {
   min-height: 100px;
 }
 
+.card-header {
+  background-color: white;
+}
+
 .card-footer {
   text-align: center;
+  background-color: white;
 }
 
 .card-footer::before {
@@ -72,9 +92,26 @@ header {
   clear: both;
 }
 
+.form-check {
+  display: inline-block;
+  width: 40%;
+  padding: 3px;
+}
+
+.choices {
+  margin-top: 30px;
+}
+
+#range {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Button styles */
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: #66cdaa;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -97,6 +134,18 @@ button[disabled] {
   float: right;
 }
 
+/* Error message styles */
+p#validator {
+    font-weight: bold;
+    color: hsl(360, 91%, 36%);
+}
+
+/* Selector styles */
+p.instruction {
+    font-size: small;
+}
+
+/* Password box styles */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +167,12 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Style to initially not show selectors */
+#myDIV {
+    display: none;
+}
+
+/* Media queries */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -128,10 +183,14 @@ button[disabled] {
   #password {
     font-size: 1rem;
   }
-}
 
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
+  .card-footer {
+    font-size: 1rem;
   }
+
+  .form-check {
+    display: block;
+    width: 100%;
+  }
+
 }
